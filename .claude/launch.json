@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kennaney-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4567", "--directory", "/Users/jamesjefferys/Desktop/MASTER/ClaudeCode/Vector V2 Site/kennaney-site"],
+      "port": 4567
+    }
+  ]
+}
