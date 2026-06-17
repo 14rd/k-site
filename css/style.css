@@ -656,12 +656,12 @@ footer {
   .home-hero {
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
+    min-height: unset;
     grid-template-columns: unset;
   }
   .hero-right {
-    flex: 0 0 56vw;
-    min-height: 56vw;
+    flex: none;
+    min-height: unset;
     aspect-ratio: unset;
     height: 56vw;
     order: -1;
@@ -669,8 +669,8 @@ footer {
   }
   .hero-right img { position: absolute; }
   .hero-left {
-    flex: 1;
-    padding: 36px 24px 40px;
+    flex: none;
+    padding: 32px 24px 36px;
     justify-content: flex-start;
   }
   .hero-location {
