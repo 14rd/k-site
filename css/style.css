@@ -235,24 +235,18 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-.hero-cta-primary {
-  font-size: 14px;
-  font-weight: 600;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 4px;
-  text-decoration: none;
-  color: var(--ink);
-  transition: opacity .2s;
-}
-.hero-cta-primary:hover { opacity: .55; }
+.hero-cta-primary,
 .hero-cta-secondary {
   font-size: 14px;
   font-weight: 500;
-  color: var(--mute);
+  color: var(--ink);
   text-decoration: none;
-  transition: color .2s;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+  transition: border-color .2s;
 }
-.hero-cta-secondary:hover { color: var(--ink); }
+.hero-cta-primary:hover,
+.hero-cta-secondary:hover { border-color: var(--ink); }
 
 .hero-location {
   position: absolute;
@@ -681,7 +675,7 @@ footer {
   }
   .hero-location {
     position: static;
-    margin-top: 28px;
+    margin-top: 20px;
   }
   .hero-eyebrow { margin-bottom: 14px; }
   .hero-intro { font-size: clamp(18px,5vw,24px); }
@@ -711,6 +705,11 @@ footer {
     margin-top: 0;
   }
   .feat-d .card-img-wrap { aspect-ratio: 4 / 3 !important; }
+
+  /* ── Selected work section top gap ── */
+  .selected-work {
+    padding-top: 36px;
+  }
 
   /* ── Work index ── */
   .work-grid {
