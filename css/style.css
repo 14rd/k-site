@@ -73,7 +73,7 @@ p { margin: 0; }
 
 /* ── Footer ── */
 footer {
-  background: var(--panel);
+  background: var(--paper);
   border-top: 1px solid var(--line);
 }
 
@@ -658,33 +658,67 @@ footer {
    RESPONSIVE
 ───────────────────────────────────────── */
 @media (max-width: 820px) {
+  /* ── Mobile hero ── */
   .home-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    grid-template-columns: unset;
   }
   .hero-right {
-    min-height: 70vw;
-    aspect-ratio: 4 / 5;
+    flex: 0 0 56vw;
+    min-height: 56vw;
+    aspect-ratio: unset;
+    height: 56vw;
     order: -1;
+    position: relative;
   }
   .hero-right img { position: absolute; }
-  .hero-left { padding: 64px clamp(20px,5vw,40px) 56px; }
-  .hero-location { position: static; margin-top: 32px; }
-
-  .featured-grid {
-    grid-template-columns: 1fr;
+  .hero-left {
+    flex: 1;
+    padding: 36px 24px 40px;
+    justify-content: flex-start;
   }
-  .feat-a, .feat-b, .feat-c, .feat-d {
-    grid-column: 1;
+  .hero-location {
+    position: static;
+    margin-top: 28px;
+  }
+  .hero-eyebrow { margin-bottom: 14px; }
+  .hero-intro { font-size: clamp(18px,5vw,24px); }
+  .hero-actions { margin-top: 24px; gap: 20px; }
+
+  /* ── Mobile home featured grid (editorial 2-col) ── */
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .feat-a {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    /* landscape crop for big opening card */
+  }
+  .feat-a .card-img-wrap { aspect-ratio: 3 / 2 !important; }
+  .feat-b {
+    grid-column: 1 / 2;
+    margin-top: 22px;
+  }
+  .feat-c {
+    grid-column: 2 / 3;
     margin-top: 0;
   }
-  .feat-b, .feat-c, .feat-d { margin-top: clamp(24px,5vw,40px); }
+  .feat-d {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .feat-d .card-img-wrap { aspect-ratio: 4 / 3 !important; }
 
+  /* ── Work index ── */
   .work-grid {
     grid-template-columns: 1fr;
   }
   .work-grid .card:nth-child(even) { margin-top: 0; }
 
+  /* ── About ── */
   .about-grid {
     grid-template-columns: 1fr;
   }
