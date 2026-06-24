@@ -470,6 +470,20 @@ footer {
   margin-top: 10px;
   font-weight: 500;
 }
+.collection-look {
+  margin-top: clamp(52px,7vw,88px);
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.collection-look-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 24px;
+}
+
 .next-project {
   border-top: 1px solid var(--line);
   margin-top: clamp(52px,8vw,100px);
